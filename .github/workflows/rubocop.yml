@@ -10,7 +10,7 @@ on:
 
 jobs:
   rubocop:
-    name: Ruocop Action
+    name: Rubocop Action
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master

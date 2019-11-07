@@ -22,7 +22,7 @@ end
   if ENV['REPORT_PATH']
     read_json(ENV['REPORT_PATH'])
   else
-    Dir.chdir(ENV['GITHUB_WORKSPACE']) { JSON.parse(`rubocop --parallel -f json`) }
+    Dir.chdir(ENV['GITHUB_WORKSPACE']) { JSON.parse(`bundle exec rubocop --parallel -f json`) }
   end
 
 GithubCheckRunService.new(@report, @github_data, ReportAdapter).run

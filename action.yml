@@ -2,6 +2,11 @@
 name: 'Rubocop Linter Action'
 description: 'A GitHub Action that lints your Ruby code with Rubocop!'
 author: 'Andrew Mason <andrewmcodes@protonmail.com>'
+inputs:
+  ruby-version:
+    description: 'Ruby version used in the container'
+    required: false
+    default: '2.6.5'
 runs:
   using: 'docker'
   image: 'Dockerfile'
